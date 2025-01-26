@@ -1,0 +1,158 @@
+@font-face {
+  font-family: moreSugar;
+  src: url("./assets/fonts/MoreSugar-Regular.ttf");
+}
+@font-face {
+  font-family: archivo;
+  src: url("./assets/fonts/ArchivoBlack-Regular.ttf");
+}
+
+@font-face {
+  font-family: lato;
+  src: url("./assets/fonts/Lato-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: lato;
+  src: url("./assets/fonts/Lato-Italic.ttf") format("truetype");
+  font-weight: normal;
+  font-style: italic;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 90vh;
+  margin: 0;
+  padding: 16px;
+  box-sizing: border-box;
+  background-color: #f6f4f0;
+}
+
+.container {
+  height: 100%;
+}
+
+.soon {
+  font-family: lato;
+  font-size: 2rem;
+}
+
+.logo-anim {
+  animation: wiggle 2s linear infinite;
+}
+
+.container {
+  text-align: center;
+  min-height: 75vh;
+  width: 75vw;
+}
+
+.brand-name {
+  font-family: moreSugar;
+  font-size: 5rem;
+  text-align: center;
+  color: #ac0000;
+  margin: -0px;
+}
+
+.button-54 {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px;
+  position: relative;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-54:active {
+  box-shadow: 0px 0px 0px 0px;
+  top: 5px;
+  left: 5px;
+}
+
+@media (min-width: 768px) {
+  .button-54 {
+    padding: 0.25em 0.75em;
+  }
+}
+
+.rotate {
+  display: inline-block;
+  transform: rotate(var(--rotate));
+}
+
+.input-bar {
+  font-family: "Open Sans", sans-serif;
+  font-size: 16px;
+  letter-spacing: 2px;
+  text-decoration: none;
+  /* text-transform: uppercase; */
+  color: #000;
+  cursor: pointer;
+  border: 3px solid;
+  padding: 0.25em 0.5em;
+  box-shadow: 1px 1px 0px 0px, 2px 2px 0px 0px, 3px 3px 0px 0px, 4px 4px 0px 0px,
+    5px 5px 0px 0px;
+}
+
+.waitlist {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin: 1.5em;
+  font-family: lato;
+}
+
+footer {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem;
+  font-family: lato;
+  font-size: 1rem;
+  align-items: center;
+}
+
+.footer {
+  font-family: lato;
+}
+
+@keyframes wiggle {
+  0%,
+  7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%,
+  100% {
+    transform: rotateZ(0);
+  }
+}
