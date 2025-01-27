@@ -1,67 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Boring Club</title>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="./style.css">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-</head>
+    <!-- Description for SEO -->
+    <meta
+      name="description"
+      content="Boredom opens doors. Slowing down leads to fun ideas & new discoveries.🌱Join us this weekend!"
+    />
 
-<body>
+    <!-- Keywords for SEO -->
+    <meta
+      name="keywords"
+      content="club, community, hobbies, boring club, fun activities"
+    />
+
+    <!-- Author -->
+    <meta name="author" content="The Boring Club Team" />
+
+    <!-- Social Media: Open Graph -->
+    <meta property="og:title" content="The Boring Club" />
+    <meta
+      property="og:description"
+      content="Boredom opens doors. Slowing down leads to fun ideas & new discoveries.🌱Join us this weekend!"
+    />
+    <meta
+      property="og:image"
+      content="https://github.com/theboringclub/theboringclub.github.io/blob/master/assets/logo.png"
+    />
+    <meta property="og:url" content="https://theboringclub.in" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="The Boring Club" />
+    <meta
+      name="twitter:description"
+      content="Boredom opens doors. Slowing down leads to fun ideas & new discoveries.🌱Join us this weekend!."
+    />
+    <meta
+      name="twitter:image"
+      content="https://github.com/theboringclub/theboringclub.github.io/blob/master/assets/logo.png"
+    />
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/logo.png" />
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
     <div class="container">
-        <img src="./assets/logo.png" height="250px" class="logo-anim" />
-        <p class="brand-name">
-            <span class="rotate" style="--rotate: 0deg;">the</span>
-            <span class="rotate" style="--rotate: -1.9deg;">boring</span>
-            <span class="rotate" style="--rotate: 2.4deg;">club</span>
-        </p>
-        <!-- <p class="soon">
-            Coming <i>soon...</i>
-        </p> -->
-        <div>
-            <form class="waitlist" id="myForm" method="POST">
-                <input class="input-bar" placeholder="Enter email" name="email" type="email" required />
-                <button class="button-54" role="button" type="submit">👉 Join waitlist</button>
-            </form>
-        </div>
-        <footer class="footer">
-            <a href="https://x.com/theboringclub_" target="_blank">Twitter</a>
-            <a href="info@theboringclub.in" target="_blank">Email</a>
-        </footer>
+      <img src="./assets/logo.png" height="250px" class="logo-anim" />
+      <p class="brand-name">
+        <span class="rotate" style="--rotate: 0deg">the</span>
+        <span class="rotate" style="--rotate: -1.9deg">boring</span>
+        <span class="rotate" style="--rotate: 2.4deg">club</span>
+      </p>
+      <div>
+        <form class="waitlist" id="myForm" method="POST">
+          <input
+            class="input-bar"
+            placeholder="Enter email"
+            name="email"
+            type="email"
+            required
+          />
+          <button class="button-54" role="button" type="submit">
+            👉 Join waitlist
+          </button>
+        </form>
+      </div>
+      <footer class="footer">
+        <a href="https://x.com/theboringclub_" target="_blank">Twitter</a>
+        <a href="info@theboringclub.in" target="_blank">Email</a>
+      </footer>
 
-
-        <div class="footer">© TheBoringClub 2025</div>
-
+      <div class="footer">© TheBoringClub 2025</div>
     </div>
-</body>
+  </body>
 
-<script>
-    const form = document.getElementById('myForm');
+  <script>
+    const form = document.getElementById("myForm");
 
-    form.addEventListener('submit', async (e) => {
-        e.preventDefault();
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
 
-        const formData = new FormData(form);
-        const data = Object.fromEntries(formData);
-        console.log("data", data)
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
+      console.log("data", data);
 
-        const response = await fetch('https://script.google.com/macros/s/AKfycbzptHvuZuqymPe3H4V7BHxflYCU3h0ZxE8tM0KozgaeDHQjrfC2b04XXlmrZ2fTmAbz/exec', {
-            method: 'POST',
-            headers: {
-                'Content-Type': 'application/json',
-            },
-            body: JSON.stringify(data),
-        });
-
-        if (response.status === 200) {
-            alert('Form submitted successfully!');
-        } else {
-            alert('Something went wrong.');
+      const response = await fetch(
+        "https://script.google.com/macros/s/AKfycbzptHvuZuqymPe3H4V7BHxflYCU3h0ZxE8tM0KozgaeDHQjrfC2b04XXlmrZ2fTmAbz/exec",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
         }
+      );
+
+      if (response.status === 200) {
+        alert("Form submitted successfully!");
+      } else {
+        alert("Something went wrong.");
+      }
     });
-</script>
-
-
+  </script>
 </html>
